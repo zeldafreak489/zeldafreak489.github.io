@@ -1,0 +1,155 @@
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Change background color on hover */
+}
+
+nav ul li {
+    display: inline-block; /* Ensure items align horizontally */
+}
+
+nav {
+    overflow: hidden; /* Prevent overflow */
+}
+
+nav ul {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+}
+
+
+/* Ensure image scales properly */
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 100vw; /* Make sure image doesn't exceed viewport width */
+    margin: 0;
+  }
+  
+  img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Make sure the whole image is visible */
+    display: block;
+  }
+  
+  /* Centered text over the image */
+.centered-container {
+    position: absolute; /* or relative, depending on your layout */
+    top: 25%; /* Adjust as needed */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center using transform */
+    text-align: center; /* Center text and button */
+}
+
+.centered-text {
+    margin-bottom: 20px; /* Space between text and button */
+}
+
+/* Default Sizes */
+.centered-text h1 {
+    font-size: 3rem; /* Default font size for h1 */
+}
+
+.centered-text h6 {
+    font-size: 1.5rem; /* Default font size for h6 */
+}
+
+.centered-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.centered-button button {
+    font-size: 1.25rem; /* Default font size for button */
+    padding: 12px 24px; /* Default padding for button */
+    display: inline-flex; /* Use inline-flex to keep content centered */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin: 0 auto;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .centered-text h1 {
+        font-size: 2.5rem; /* Scale down h1 */
+    }
+
+    .centered-text h6 {
+        font-size: 1.2rem; /* Scale down h6 */
+    }
+
+    .centered-button button {
+        font-size: 1rem; /* Scale down button text */
+        padding: 10px 20px; /* Scale down button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .centered-text h1 {
+        font-size: 2rem; /* Further scale down h1 */
+    }
+
+    .centered-text h6 {
+        font-size: 1rem; /* Further scale down h6 */
+    }
+
+    .centered-button button {
+        font-size: 0.9rem; /* Further scale down button text */
+        padding: 8px 16px; /* Further scale down button padding */
+    }
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+.page-footer {
+    padding: 20px 0;
+    margin: 0;
+}
+
+.page-footer a {
+    margin: 0 15px;
+    font-size: 24px; /* Adjust icon size */
+}
+
+.footer-copyright {
+    background-color: transparent !important; /* Make background transparent */
+}
+
+#recipe_button {
+    padding: 25px;
+}
+
+.favorite-icon {
+    cursor: pointer; /* Change cursor to pointer for clickable icon */
+    color: gray; /* Default color for unselected icon */
+}
+
+.favorite-icon.active {
+    color: red; /* Color when icon is selected */
+}
+
+#recipe_header {
+    padding-bottom: 20px;
+}
+
+#back_button {
+    padding-bottom: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+.profile-pic {
+    width: 40px; /* Adjust the size as needed */
+    height: 40px; /* Maintain a square aspect ratio */
+    margin-right: 10px; /* Space between the image and username */
+}
+
+#submitbutton {
+    padding-bottom: 20px;
+}
