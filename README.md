@@ -1,7 +1,10 @@
 # PWA AnonChef - Iris Perry
 
 This is my expanded PWA Prototype for my INF654VA class. It is a recipe app that allows users to create an anonymous account, share recipes, and save recipes.
-It has now been upgraded into a PWA with a web manifest and service worker.
+It has now been upgraded into a PWA with a web manifest and service worker. This project has now been upgraded with user authentication.
+
+# December 10, 2024 Final Project
+This application has now been upgraded with user authentication with Firebase.
 
 # November 19, 2024 Assignment 4
 This app has now been upgraded with IndexedDB and Firebase Firestore. I have integrated them in the MyCookbook section so far.
