@@ -1,0 +1,50 @@
+{
+    "name": "AnonChef",
+    "short_name": "AC",
+    "description": "Share your recipes anonymously",
+    "start_url": "/index.html",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#FFFFFF",
+    "theme_color": "#4CAF50",
+    "lang": "en-US",
+
+    "screenshots": [
+        {
+            "src": "/img/screenshots/screenshot1.png",
+            "type": "image/png",
+            "sizes": "977x910",
+            "form_factor": "wide"
+        },
+        {
+            "src": "/img/screenshots/screenshot2.png",
+            "type": "image/png",
+            "sizes": "364x673",
+            "form_factor": "narrow"
+        }
+    ], 
+
+    "icons": [
+        {
+            "src": "/img/icons/ac-icon-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/img/icons/ac-icon-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }, 
+        {
+            "src": "/img/icons/ac-icon-32x32.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "/img/icons/ac-icon-16x16.png",
+            "type": "image/png",
+            "sizes": "16x16"
+        }
+    ]
+}

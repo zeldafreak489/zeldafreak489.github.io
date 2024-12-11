@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Recipes - AnonChef</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="manifest" href="/manifest.json" />
+</head>
+
+<body class="gray lighten-4">
+    <header>
+        <!-- Nav bar for bigger screens -->
+        <nav class="z-depth-0 green">
+            <div class="nav-wrapper container">
+                <div class="brand-logo">
+                    <a 
+                    href="/"
+                    data-target="mobile-menu"
+                    class="white-text"
+                    aria-label="AnonChef Home"
+                >
+                    AnonChef
+                </a>
+                </div>
+            
+                <!-- Hamburger menu for medium and small screens -->
+                <a href="#" class="sidenav-trigger left hide-on-large white-text" data-target="mobile-menu">
+                    <i class="material-icons">menu</i>
+                </a>
+
+                <!-- Navbar links for large screens -->
+                <div class="right hide-on-med-and-down">
+                    <ul class="right hide-on-small-and-down">
+                        <li>
+                            <a href="/pages/recipes.html" class="waves-effect white-text">Recipes</a>
+                        </li>
+                        <li>
+                            <a href="/pages/contact.html" class="waves-effect white-text">Contact</a>
+                        </li>
+                        <li>
+                            <a href="/pages/mycookbook.html" class="waves-effect white-text">My Cookbook</a>
+                        </li>
+                        <li>
+                            <a href="/pages/login.html" class="btn-small orange darken-2" id="login-btn">Log In/Sign Up</a>
+                        </li>
+                        <li>
+                            <a id="logout-btn" class="btn-small orange darken-2" style="display: none;">Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <aside>
+        <ul class="sidenav" id="mobile-menu">
+            <li>
+                <a href="/" class="subheader"><h5>AnonChef</h5></a>
+            </li>
+            <li>
+                <a href="/" class="waves-effect grey-text text-darken-4">Home</a>
+            </li>
+            <li>
+                <a href="/pages/recipes.html" class="waves-effect grey-text text-darken-4">Recipes</a>
+            </li>
+            <li>
+                <a href="/pages/account.html" class="waves-effect grey-text text-darken-4">Create an Account</a>
+            </li>
+            <li>
+                <a href="/pages/contact.html" class="waves-effect grey-text text-darken-4">Contact</a>
+            </li>
+            <li>
+                <a href="/pages/myaccount.html" class="waves-effect grey-text text-darken-4">My Account</a>
+            </li>
+            <li>
+                <a href="/pages/mycookbook.html" class="waves-effect grey-text text-darken-4">My Cookbook</a>
+            </li>
+            <li>
+                <a href="/pages/login.html" class="waves-effect grey-text text-darken-4">Log In</a>
+            </li>
+        </ul>
+    </aside>
+
+    <main>
+        <!-- Heading at top of page -->
+        <h1 class="col s12 center" id="recipe_header">Recipes</h1>
+
+        <!-- Recipe Search Bar -->
+        <div class="container">
+            <div class="input-field">
+                <i class="material-icons prefix">search</i>
+                <input type="text" id="recipe-search" placeholder="Search for recipes..." class="validate">
+                <label for="recipe-search" class="black-text">Recipe Search</label>
+            </div>
+        </div>
+
+        <!-- Container for Recipes -->
+        <div class="container grey-text text-darken-4">
+            <ul id="recipe-list" class="colleciton">
+                <!-- Recipe Links will be added dynamically -->
+            </ul>
+        </div>         
+
+            <!-- Submit Recipe Button-->
+            <div class="center hoverable" id="recipe_button">
+                <button 
+                    class="btn-large orange darken-2 modal-trigger"
+                    data-target="modal1"
+                >
+                    <i class="material-icons left">add</i>
+                    Add Recipe
+                </button>
+            </div>
+
+            <!-- Recipe Form Side Form-->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h6>Add New Recipe</h6>
+                    <div class="divider"></div>
+                    <form class="add-recipe-form">
+                        
+                        <!-- Title -->
+                        <div class="input-field">
+                            <label for="title" class="black-text">Recipe Title</label>
+                            <input type="text" placeholder="Enter Recipe Title" id="title" class="validate" required>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="input-field">
+                            <label for="description" class="black-text">Recipe Description</label>
+                            <input type="text" placeholder="Enter Recipe Description" id="description" class="validate" required>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="input-field">
+                            <label for="recipe" class="black-text">Recipe</label>
+                            <textarea id="recipe" class="materialize-textarea" placeholder="Enter Recipe" required></textarea>
+                        </div>
+                        
+                         <!-- Image Upload -->
+                        <div class="input-field">
+                            <label for="imageUpload" class="black-text"></label>
+                            <input type="file" id="imageUpload" accept="image/*" required>
+                        </div>
+
+                        <!-- Add Button -->
+                        <div class="input-field center">
+                            <button type="submit" class="btn-small orange darken-2">Add</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+    </main>
+
+    <footer class="page-footer green">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <h5 class="white-text">Follow Us</h5>
+                    <a href="https://facebook.com" class="white-text" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com" class="white-text" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" class="white-text" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://pinterest.com" class="white-text" target="_blank">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2024 Copyright AnonChef. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script type="module" src="/js/ui.js"></script>
+    <script type="module" src="/js/firebaseConfig.js"></script>
+    <script type="module" src="/js/firebaseDB.js"></script>
+    <script type="module" src="/js/signin.js"></script>
+    <script type="module" src="/js/auth.js"></script>
+</body>
+</html>
