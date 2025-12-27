@@ -1,54 +1,70 @@
-# PWA AnonChef - Iris Perry
+# AnonChef
 
-This is my expanded PWA Prototype for my INF654VA class. It is a recipe app that allows users to create an anonymous account, share recipes, and save recipes.
-It has now been upgraded into a PWA with a web manifest and service worker. This project has now been upgraded with user authentication.
+AnonChef is a Progressive Web Application (PWA) that allows users to anonymously create, browse, and manage recipes with full offline support. The application demonstrates client-side persistence, real-time cloud synchronization, and modern web app features such as service workers and installability.
 
-# December 10, 2024 Final Project
-This application has now been upgraded with user authentication with Firebase.
+---
 
-# November 19, 2024 Assignment 4
-This app has now been upgraded with IndexedDB and Firebase Firestore. I have integrated them in the MyCookbook section so far.
-The user can upload recipes to their cookbook and remove them. I have not yet figured out how I am going to handle storing photos, so at the moment there is just a dummy photo of chicken noodle soup added. I also need to implement users and user authentication before I fully complete the application. The users are integral to recipe sharing, so I just wanted to set up an intermediate version of IndexedDB and Firebase first.
+## Overview
 
-# CRUD Instructions
-On the My Cookbook page, you can Create recipes using the add button at the bottom of the page. A modal form will pop up and allow you to input the recipe title, description, body, and an image for it.
-The application Reads the recipes from IndexedDB and Firebase Firestore and displays them in your cookbook.
-The application Updates the recipes because when it is offline, it uses IndexedDB to store the recipes and syncs them with Firebase DB when it comes back online.
-If you press the delete button on a recipe card, it will delete the recipe from both IndexedDB and Firebase.
+AnonChef enables users to interact with the platform without exposing personal identity while still maintaining secure authentication. Recipes can be created, edited, and deleted both online and offline, with data automatically synchronized once connectivity is restored.
 
-# Synchronization Process
-When the application is offline, if a user adds a recipe, it is stored in IndexedDB. When the application comes back online, on the next refresh, it synchronized with Firebase Firestore and the recipes added offline are added there.
+---
 
-# Service Worker
-What is a Service Worker?
+## Features
 
-A service worker is a script that runs in the background, separate from the web page, enabling capabilities such as offline support, background syncing, and push notifications.
+- Anonymous user authentication using Firebase Authentication
+- Full CRUD functionality for user-created recipes
+- Offline-first design with IndexedDB for local storage
+- Automatic synchronization with Firebase Firestore when back online
+- Progressive Web App support (installable, responsive, offline-capable)
+- Asset and data caching via service workers
 
-# How It Works in This Project
+---
 
-The service worker in this project is responsible for:
+## Tech Stack
 
-    Intercepting network requests and serving cached content when offline.
-    Managing the caching of assets during installation and activation phases.
+- HTML, CSS, JavaScript
+- Firebase Authentication
+- Firebase Firestore
+- IndexedDB
+- Service Workers
+- Web App Manifest
 
-# Lifecycle Phases
+---
 
-    Installation: Caches specified assets.
-    Activation: Cleans up old caches.
-    Fetch: Intercepts network requests and returns cached content or fetches new data.
+## Application Behavior
 
-# Caching Strategy
+### Offline Support
+When the application is offline:
+- Recipes are stored locally using IndexedDB
+- The UI remains fully functional
+- Data is queued for synchronization
 
-This strategy allows the service worker to respond with cached resources if available, falling back to the network if not. It helps ensure fast load times and offline access.
+Once the connection is restored:
+- Locally stored recipes are automatically synced to Firestore
+- The user experience remains seamless
 
-The chosen strategy offers a balance between speed and freshness, providing users with a responsive experience while still updating assets periodically.
+### Caching Strategy
+The service worker caches:
+- Core application files (HTML, CSS, JavaScript)
+- Images and static assets
+- Manifest and service worker scripts
 
-# Cache Management
+This improves load times and enables offline access.
 
-    Updating Cache: The service worker checks for updates to cache assets during the activation phase.
-    Clearing Old Caches: Old caches are removed to prevent excess storage use.
+---
 
-# Manifest File
-What is a Manifest File?
+## Installation and Setup
 
-The web app manifest is a JSON file that defines the structure of the PWA, making it installable and more app-like on devices.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/zeldafreak489/AnonChef.git
+   cd AnonChef
+   ```
+2. Configure Firebase:
+   * Create a Firebase project
+   * Enable Authentication and Firestore
+   * Add your Firebase configuration to the application
+3. Run the app:
+   * Serve the project using a local web server such as live-server or http-server
+   * PWA features require HTTPS or localhost
